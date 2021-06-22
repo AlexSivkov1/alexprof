@@ -20,11 +20,12 @@ class PostController extends Controller
 
     public function show($slug)
     {
+        $categories = Category::pluck('title', 'id')->all();
         $post = Post::where('slug', $slug)->firstOrFail();
         $post->views += 1;
         $post->update();
 
-        return view('posts.show', compact('post'));
+        return view('posts.show', compact('post','categories'));
     }
 
 }
