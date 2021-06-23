@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', 'MainController@index')->name('main');
 
-Route::get('/menu', 'MainController@menu')->name('menu');
+Route::get('/menu/{slug}', 'MainController@menu')->name('menu');
 
 Route::get('/articles-list', 'PostController@index')->name('home');
 

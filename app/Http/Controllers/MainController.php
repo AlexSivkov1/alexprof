@@ -19,6 +19,7 @@ class MainController extends Controller
 
     public function menu()
     {
+        // отвечает за нажатие по выпадающей кнопке меню Категории
         $categories = Category::pluck('title', 'id')->all();
         return view('layouts.layout', compact('categories'));
 
