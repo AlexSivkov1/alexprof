@@ -9,9 +9,14 @@
     <link href="https://fonts.googleapis.com/css?family=Raleway:100,300,400,500,700,900" rel="stylesheet">
     <title>@yield('title')</title>
     <link rel="stylesheet" href="{{ asset('assets/front/css/front.css') }}">
+    <link rel="stylesheet" href="{{asset('/assets/my.css')}}">
+
+
+
 </head>
 
 <body>
+
 {{--<div id="video">--}}
 {{--<div class="preloader">
     <div class="preloader-bounce">
@@ -20,46 +25,58 @@
         <span></span>
     </div>
 </div>--}}
+
 <header id="header">
     <div class="container-fluid">
-        <header id="header">
-            <div class="container-fluid">
-                <div class="navbar">
-                    <a class="text-lowercase" href="{{ route('main') }}" id="logo" title="AlexProfile">
-                        AlexProfile
-                    </a>
-                    <div class="navigation-row">
-                        {{--жду меню!!!!!!!!!!!!!!!!!!!!!!!--}}
-                        <nav class="animenu" role="navigation" aria-label="Menu">
-                            <ul class="animenu__nav">
-                                <li><a href="{{ route('main') }}">Home</a></li>
-                                <li>
-                                    <a href="#" class="animenu__nav__hasDropdown" aria-haspopup="true">Архив</a>
-                                    <ul class="animenu__nav__dropdown" aria-label="submenu" role="menu">
-                                        <li><a href="#" role="menuitem">Sub Item 1</a></li>
-                                        <li><a href="#" role="menuitem">Sub Item 2</a></li>
-                                        <li><a href="#" role="menuitem">Sub Item 3</a></li>
-                                    </ul>
-                                </li>
-                                <li>
-                                    <a href="{{ route('cats.all') }}" class="animenu__nav__hasDropdown" aria-haspopup="true">Категории</a>
-                                    <ul class="animenu__nav__dropdown" aria-label="submenu" role="menu">
-                                        <li><a href="#" role="menuitem">Sub Item 1</a></li>
-                                        <li><a href="#" role="menuitem">Sub Item 2</a></li>
-                                        <li><a href="#" role="menuitem">Sub Item 3</a></li>
-                                    </ul>
-                                </li>
-                                <li><a href="#">About</a></li>
-                                <li><a href="#">Contact</a></li>
+        <div class="navbar">
+            <a class="text-lowercase" href="{{ route('main') }}" id="logo" title="AlexProfile">
+                AlexProfile
+            </a>
+            <div class="navigation-row">
+                {{--жду меню!!!!!!!!!!!!!!!!!!!!!!!--}}
+                <nav class="animenu" role="navigation" aria-label="Menu">
+                    <ul class="animenu__nav">
+
+
+                        <li><a href="{{ route('main') }}">Home</a></li>
+                        <li>
+                            <a href="#" class="animenu__nav__hasDropdown" aria-haspopup="true">Архив</a>
+                            <ul class="animenu__nav__dropdown" aria-label="submenu" role="menu">
+
+                                <li><a href="#" role="menuitem">Sub Item 1</a></li>
+                                <li><a href="#" role="menuitem">Sub Item 2</a></li>
+                                <li><a href="#" role="menuitem">Sub Item 3</a></li>
                             </ul>
-                        </nav>
-                    </div>
-                </div>
+                        </li>
+                        <li>
+                            <a href=" {{ route('cats.all') }}" class="animenu__nav__hasDropdown"
+                               aria-haspopup="true">Категории</a>
+                            <ul class="animenu__nav__dropdown" aria-label="submenu" role="menu">
+                                @foreach($categories as $k => $v)
+                                    <li>
+                                        <a id="$v" href="{{route('menu', ['slug'=>$k])}}" role="menuitem"> {{ $v }} </a></li>
+                                @endforeach
+                            </ul>
+                        </li>
+                        <li><a href="#">About</a></li>
+                        <li><a href="#">Contact</a></li>
+
+
+
+                    </ul>
+                </nav>
             </div>
-        </header>
+        </div>
     </div>
 </header>
+{{--<video autoplay muted loop id="myVideo">--}}
+{{--<source src="images/video-bg.mp4" type="video/mp4">--}}
+{{--</video>--}}
+
+
+
 @yield('content')
+
 
 
 {{--contact информация--}}
@@ -119,9 +136,13 @@
         </ul>
     </div>
 </div>
+{{--скрипт для ВЫПАДАЮЩЕГО МЕНЮ--}}
+
 
 
 <script src="{{ asset('assets/front/js/front.js') }}"></script>
+<script src="{{ asset('assets/my.js') }}"></script>
+
 
 
 

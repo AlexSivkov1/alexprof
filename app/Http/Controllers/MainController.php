@@ -17,11 +17,13 @@ class MainController extends Controller
         return view('main.index', compact('posts', 'categories'));
     }
 
-    public function menu()
+    public function menu($slug)
     {
+        $category = Category::where('slug', $slug)->firstOrFail();
+        $posts = $category->posts()->orderBy('id', 'desc')->paginate(3);
         // отвечает за нажатие по выпадающей кнопке меню Категории
-        $categories = Category::pluck('title', 'id')->all();
-        return view('layouts.layout', compact('categories'));
+        $categories = Category::pluck('title', 'slug')->all();
+        return view('cats.index', compact('categories', 'category', 'posts'));
 
     }
 

@@ -54,7 +54,7 @@
                                 <ul class="animenu__nav__dropdown" aria-label="submenu" role="menu">
                                     @foreach($categories as $k => $v)
                                         <li>
-                                     <a id="$v" href="{{route('menu')}}" role="menuitem"> {{ $v }} </a></li>
+                                     <a id="$v" href="{{route('menu', ['slug'=>$k])}}" role="menuitem"> {{ $v }} </a></li>
                                     @endforeach
                                 </ul>
                             </li>
