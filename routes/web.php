@@ -2,22 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 
-Route::get('/', 'MainController@index')->name('main');
-
-Route::get('/menu/{slug}', 'MainController@menu')->name('menu');
-
-Route::get('/articles-list', 'PostController@index')->name('home');
-
-Route::get('/article/{slug}', 'PostController@show')->name('posts.single');
-
-// ниже для обзора всех Категорий
-Route::get('/cats-list', 'CategoryController@index')->name('cats.all');
-// ниже для обзора отдельной Категории
-Route::get('/category/{slug}', 'CategoryController@show')->name('category.single');
-
-
-Route::get('/tag/{slug}', 'TagController@show')->name('tags.single');
-
+Route::get('/', 'HomeController@index')->name('home');
 
 
 
