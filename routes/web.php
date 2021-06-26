@@ -7,6 +7,7 @@ Route::get('/', 'HomeController@index')->name('home');
 Route::get('/posts', 'PostController@index')->name('posts.all');
 // выводит 1 ПОСТ
 Route::get('/posts/{slug}', 'PostController@show')->name('posts.single');
+Route::get('/categories', 'CategoryController@index')->name('categories.all');
 
 
 

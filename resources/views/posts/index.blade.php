@@ -19,24 +19,24 @@
                             {{--<li><a href="{{ route('main') }}">Home</a></li>--}}
                             <li>
                                 <a href="{{ route('posts.all') }}" class="animenu__nav__hasDropdown" aria-haspopup="true">Архив</a>
-                                <ul class="animenu__nav__dropdown" aria-label="submenu" role="menu">
+                              {{--  <ul class="animenu__nav__dropdown" aria-label="submenu" role="menu">
 
                                     <li><a href="#" role="menuitem">Sub Item 1</a></li>
                                     <li><a href="#" role="menuitem">Sub Item 2</a></li>
                                     <li><a href="#" role="menuitem">Sub Item 3</a></li>
-                                </ul>
+                                </ul>--}}
                             </li>
-                            {{-- <li>
-                                 <a href=" {{ route('cats.all') }}" class="animenu__nav__hasDropdown"
+                             <li>
+                                 <a href=" {{ route('categories.all') }}" class="animenu__nav__hasDropdown"
                                     aria-haspopup="true">Категории</a>
-                                 <ul class="animenu__nav__dropdown" aria-label="submenu" role="menu">
+                             {{--    <ul class="animenu__nav__dropdown" aria-label="submenu" role="menu">
                                      @foreach($categories as $k => $v)
                                          <li>
                                              <a href="{{route('menu', ['slug'=>$k])}}" role="menuitem"> {{ $v }} </a>
                                          </li>
                                      @endforeach
-                                 </ul>
-                             </li>--}}
+                                 </ul>--}}
+                             </li>
                             <li><a href="#">Contact</a></li>
 
                         </ul>
