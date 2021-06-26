@@ -7,7 +7,7 @@
     <div class="menu" id="header">
         <div class="container-fluid">
             <div class="navbar">
-                <a class="text-lowercase" href="#" id="logo" title="AlexProfile">
+                <a class="text-lowercase" href="{{ route('home') }}" id="logo" title="AlexProfile">
                     AlexProfile
                 </a>
                 <div class="navigation-row">
@@ -69,7 +69,7 @@
 
                                     <div class="item animate flex-active" data-animate="fadeInUp"
                                          style="height: 500px; width: 400px">
-                                        <a href="{{ route('posts.all') }}"
+                                        <a href="{{ route('posts.single', ['slug'=>$post->slug]) }}"
                                            style="width : 200px; height: 100px ">
                                             <img src="{{ $post->getImage() }}" style="height: 80%; width: 80%"></a>
                                         {!! $post->description !!}

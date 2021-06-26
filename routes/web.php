@@ -6,7 +6,7 @@ Route::get('/', 'HomeController@index')->name('home');
 // выводит ВСЕ ПОСТЫ из кнопки АРХИВ на панели МЕНЮ
 Route::get('/posts', 'PostController@index')->name('posts.all');
 // выводит 1 ПОСТ
-Route::get('/posts/{slug}', 'PostController@show')->name('posts.show');
+Route::get('/posts/{slug}', 'PostController@show')->name('posts.single');
 
 
 
