@@ -17,7 +17,7 @@
 
                             {{--<li><a href="{{ route('main') }}">Home</a></li>--}}
                             <li>
-                                <a href="#" class="animenu__nav__hasDropdown" aria-haspopup="true">Архив</a>
+                                <a href="{{ route('posts.all') }}" class="animenu__nav__hasDropdown" aria-haspopup="true">Архив</a>
                                 <ul class="animenu__nav__dropdown" aria-label="submenu" role="menu">
 
                                     <li><a href="#" role="menuitem">Sub Item 1</a></li>
