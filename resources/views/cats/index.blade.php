@@ -46,41 +46,34 @@
 
 @section('content')
 
-    <div class="row justify-content-center">
-        <div class="title-block animated fadeInUp" data-animate="fadeInUp" style="margin-top: 60px;">
+    {{--<div class="contai">
 
-            {{--<h2><span>Посты категории: </span>{{ $category->title }}: </h2>--}}
+
+
+        <div class="card w-25" style="margin-top: 100px;">
+        @foreach($categories as $category)
+
+            <div class="card-body">
+                <h5 class="card-title" style="color: #000000">{{ $category->title }}</h5>
+                <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                <a href="#" class="btn btn-primary">Кнопка</a>
+            </div>
+            @endforeach
         </div>
 
-            <div class="gallery-list owl-carousel owl-loaded owl-drag">
-                <div class="owl-stage-outer" style="margin-top:100px">
-                    <div class="owl-stage"
-                         style="transform: translate3d(-2242px, 0px, 0px); transition: all 0.7s ease 0s; width: 3364px;">
-                        @foreach($posts as $post)
-                            <div class="owl-item" style="width: 343.667px;">
-                                <div class="item animate-active" data-animate="fadeInUp">
-                                    <div class="portfolio-item" style="margin-right: 20px">
-                                        <div class="thumb">
-                                            <img src="{{ $post->getImage() }}" alt="">
-                                        </div>
-                                        <div class="thumb-inner animate" data-animate="fadeInUp">
-                                            <h4>templatemo is the best</h4>
-                                            <p>Please tell your friends about it. Templatemo is the best website to download
-                                                free Bootstrap CSS templates.</p>
-                                        </div>
-                                    </div>
-                                </div>
-
-                            </div>
-                        @endforeach
-                    </div>
-                </div>
-
-
+    </div>--}}
+    <div class="row justify-content-center" style="margin-top:100px;">
+    <div class="container p-0 row" style="padding: 3px;  display: flex; ">
+        @foreach($categories as $category)
+            <div class="card-body">
+                <h5 class="card-title" style="color: #e0e0e0">{{ $category->title }}</h5>
+               {{-- <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>--}}
+                <a href="#" class="btn btn-primary">Публикации</a>
             </div>
+        @endforeach
 
     </div>
-
+</div>
 
 @endsection
 
