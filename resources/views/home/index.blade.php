@@ -6,7 +6,7 @@
     <div class="menu" id="header">
         <div class="container-fluid">
             <div class="navbar">
-                <a class="text-lowercase" href="#" id="logo" title="AlexProfile">
+                <a class="text-lowercase" href="{{ route('home') }}" id="logo" title="AlexProfile">
                     AlexProfile
                 </a>
                 <div class="navigation-row">
