@@ -17,7 +17,47 @@
 
 <body>
 
-@yield('menuheader')
+<div class="menu" id="header">
+    <div class="container-fluid">
+        <div class="navbar">
+            <a class="text-lowercase" href="{{ route('home') }}" id="logo" title="AlexProfile">
+                AlexProfile
+            </a>
+            <div class="navigation-row">
+                {{--жду меню!!!!!!!!!!!!!!!!!!!!!!!--}}
+                <nav class="animenu" role="navigation" aria-label="Menu">
+                    <ul class="animenu__nav">
+
+
+                        {{--<li><a href="{{ route('main') }}">Home</a></li>--}}
+                        <li>
+                            <a href="{{ route('posts.all') }}" class="animenu__nav__hasDropdown" aria-haspopup="true">Архив</a>
+                            {{-- <ul class="animenu__nav__dropdown" aria-label="submenu" role="menu">
+
+                                 <li><a href="#" role="menuitem">Sub Item 1</a></li>
+                                 <li><a href="#" role="menuitem">Sub Item 2</a></li>
+                                 <li><a href="#" role="menuitem">Sub Item 3</a></li>
+                             </ul>--}}
+                        </li>
+                        <li>
+                            <a href=" {{ route('categories.all') }}" class="animenu__nav__hasDropdown"
+                               aria-haspopup="true">Категории</a>
+                            <ul class="animenu__nav__dropdown" aria-label="submenu" role="menu">
+                                @foreach($menu_categories as $menu_category)
+                                    <li>
+                                        <a href="{{route('categories.single', ['slug'=>$menu_category->slug])}}" role="menuitem"> {{ $menu_category->title }} </a>
+                                    </li>
+                                @endforeach
+                            </ul>
+                        </li>
+                        <li><a href="#">Contact</a></li>
+
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </div>
+</div>
 
 @yield('content')
 

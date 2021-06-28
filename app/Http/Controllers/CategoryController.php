@@ -23,9 +23,12 @@ class CategoryController extends Controller
 
     public function show($slug)
     {
-        $categories = Category::with('posts')->paginate(100);
 
-        return view('cats.show', compact('categories'));
+        $category = Category::all();
+        $categories = Category::pluck('title', 'slug')->all();
+        $posts = Post::with('category')->orderBy('id', 'desc')->paginate(15);
+        $post = Category::where('slug', $slug)->firstOrFail();
+        return view('cats.show', compact('categories', 'posts', 'post', 'category'));
 
     }
 }

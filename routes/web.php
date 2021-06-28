@@ -3,11 +3,15 @@
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', 'HomeController@index')->name('home');
+
+
 // выводит ВСЕ ПОСТЫ из кнопки АРХИВ на панели МЕНЮ
 Route::get('/posts', 'PostController@index')->name('posts.all');
 // выводит 1 ПОСТ
 Route::get('/posts/{slug}', 'PostController@show')->name('posts.single');
+
 Route::get('/categories', 'CategoryController@index')->name('categories.all');
+Route::get('/categories/{slug}', 'CategoryController@show')->name('categories.single');
 
 
 
