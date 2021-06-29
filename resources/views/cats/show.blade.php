@@ -53,7 +53,7 @@
             <div class="gallery-section">
                 <div class="gallery-list owl-carousel owl-loaded owl-drag">
 
-                    <div class="owl-stage-outer" >
+                    <div class="owl-stage-outer">
                         <div class="owl-stage "
                              style="transform: translate3d(-2242px, 0px, 0px); transition: all 0.7s ease 0s; width: 3364px;">
                             <div class="owl-item active" style="width: 343.667px;">
