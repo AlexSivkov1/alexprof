@@ -70,20 +70,18 @@
                 <div class="col-md-7 wide-col-laptop">
                     <div class="title-block animate" data-animate="fadeInUp">
                         <span>Contact</span>
-                        <h2>Get In Touch!</h2>
+
                     </div>
                     <div class="contact-section">
                         <div class="row">
                             <div class="col-md-6 animate" data-animate="fadeInUp">
                                 <div class="contact-box">
+
                                     <div class="contact-row">
-                                        <i class="fa fa-map-marker"></i> 123 New Street Here, Wonderful City 10220
+                                        <i class="fa fa-phone"></i> +79292555688
                                     </div>
                                     <div class="contact-row">
-                                        <i class="fa fa-phone"></i> 090 080 0210
-                                    </div>
-                                    <div class="contact-row">
-                                        <i class="fa fa-envelope"></i> info@company.co
+                                        <i class="fa fa-envelope"></i> plingsir2012@gmail.com
                                     </div>
                                 </div>
                             </div>

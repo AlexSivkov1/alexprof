@@ -9,8 +9,9 @@ Route::get('/', 'HomeController@index')->name('home');
 Route::get('/posts', 'PostController@index')->name('posts.all');
 // выводит 1 ПОСТ
 Route::get('/posts/{slug}', 'PostController@show')->name('posts.single');
-
+// выводит все Категории:: 1)с Кнопки "Катеогории" в Меню,
 Route::get('/categories', 'CategoryController@index')->name('categories.all');
+// выводит все Посты определенной запрошенной категории: с 1)кнопки Меню, 2)с отдельной страницы
 Route::get('/categories/{slug}', 'CategoryController@show')->name('categories.single');
 
 
