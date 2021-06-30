@@ -25,7 +25,7 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        view()->composer('layouts.layout',function($view){
+        view()->composer(['layouts.layout', 'layouts.send_layout'],function($view){
 $view->with('menu_categories', Category::orderBy('title')->get());
 
         });

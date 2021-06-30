@@ -1,16 +1,7 @@
-@extends('layouts.layout')
-@section('title', 'AlexProf:Главная страница : Home')
+@extends('layouts.send_layout')
+@section('title', 'AlexProf:Отправка сообщения')
 
-@section('content')
-  <div class="container">
-<div class="alert alert-success">
-    Письмо отправлено!
-</div>
-
-
-  </div>
-@endsection
-
+ 
 
 
 
