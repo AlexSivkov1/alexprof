@@ -717,14 +717,7 @@
       <workItem from="1625049519977" duration="11602000" />
       <workItem from="1625108849343" duration="5161000" />
       <workItem from="1625134111646" duration="386000" />
-      <workItem from="1625134527717" duration="2564000" />
-    </task>
-    <task id="LOCAL-00005" summary="ok">
-      <created>1624375920963</created>
-      <option name="number" value="00005" />
-      <option name="presentableId" value="LOCAL-00005" />
-      <option name="project" value="LOCAL" />
-      <updated>1624375920963</updated>
+      <workItem from="1625134527717" duration="2591000" />
     </task>
     <task id="LOCAL-00006" summary="ok">
       <created>1624424264804</created>
@@ -1064,12 +1057,19 @@
       <option name="project" value="LOCAL" />
       <updated>1625136087455</updated>
     </task>
-    <option name="localTasksCounter" value="54" />
+    <task id="LOCAL-00054" summary="обновил драйвер БД">
+      <created>1625137098316</created>
+      <option name="number" value="00054" />
+      <option name="presentableId" value="LOCAL-00054" />
+      <option name="project" value="LOCAL" />
+      <updated>1625137098316</updated>
+    </task>
+    <option name="localTasksCounter" value="55" />
     <option name="trackContextForNewChangelist" value="true" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="450033000" />
+    <option name="totallyTimeSpent" value="450060000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
