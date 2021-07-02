@@ -19,25 +19,28 @@
 
 <div class="menu" id="header">
     <div class="container-fluid">
-        <div class="navbar">
-            <a class="text-lowercase" href="{{ route('home') }}" id="logo" title="AlexProfile">
-                AlexProfile
-            </a>
-            <div class="navigation-row">
+        <div class="navbar col-md-12 ml-3">
+
+                <form class="form" method="get" action="{{ route('search') }}">
+                    <input name="s" class="form-control mb-0 text-center @error('s') is-invalid @enderror" type="search" placeholder="Search" required aria-label="Search" >
+                    <button class="btn-primary" style="opacity: 0.3; width: 100%; border-radius: 10px;" type="submit">Search</button>
+                </form>
+
+
+            <div class="navigation-row mb-4" style="opacity: 0.6">
                 {{--жду меню!!!!!!!!!!!!!!!!!!!!!!!--}}
                 <nav class="animenu" role="navigation" aria-label="Menu">
                     <ul class="animenu__nav">
 
 
                         {{--<li><a href="{{ route('main') }}">Home</a></li>--}}
+
                         <li>
                             <a href="{{ route('posts.all') }}" class="animenu__nav__hasDropdown" aria-haspopup="true">Архив</a>
-                            {{-- <ul class="animenu__nav__dropdown" aria-label="submenu" role="menu">
+                            <ul class="animenu__nav__dropdown" aria-label="submenu" role="menu">
 
-                                 <li><a href="#" role="menuitem">Sub Item 1</a></li>
-                                 <li><a href="#" role="menuitem">Sub Item 2</a></li>
-                                 <li><a href="#" role="menuitem">Sub Item 3</a></li>
-                             </ul>--}}
+                               {{-- <li><a href="{{ route('search') }}" role="menuitem">Поиск</a></li>--}}
+                            </ul>
                         </li>
                         <li>
                             <a href=" {{ route('categories.all') }}" class="animenu__nav__hasDropdown"

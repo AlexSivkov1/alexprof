@@ -14,6 +14,8 @@ Route::get('/categories', 'CategoryController@index')->name('categories.all');
 // выводит все Посты определенной запрошенной категории: с 1)кнопки Меню, 2)с отдельной страницы
 Route::get('/categories/{slug}', 'CategoryController@show')->name('categories.single');
 
+Route::get('/search}', 'SearchController@index')->name('search');
+
 Route::match(['get','post'], '/send','ContactController@send' )->name('send');
 
 
