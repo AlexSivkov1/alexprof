@@ -19,7 +19,7 @@
 
 <div class="menu" id="header">
     <div class="container-fluid">
-        <div class="navbar col-md-12 ml-3">
+        <div class="navbar col-md-12 ml-3 container-fluid">
 
                 <form class="form" method="get" action="{{ route('search') }}">
                     <input name="s" class="form-control mb-0 text-center @error('s') is-invalid @enderror" type="search" placeholder="Search" required aria-label="Search" >
@@ -27,7 +27,7 @@
                 </form>
 
 
-            <div class="navigation-row mb-4" style="opacity: 0.6">
+            <div class="navigation-row mb-4" style="opacity: 0.6;">
                 {{--жду меню!!!!!!!!!!!!!!!!!!!!!!!--}}
                 <nav class="animenu" role="navigation" aria-label="Menu">
                     <ul class="animenu__nav">
@@ -61,6 +61,7 @@
         </div>
     </div>
 </div>
+    </div>
 
 @yield('content')
 
@@ -120,8 +121,7 @@
             <li><a href="#" title="Instagram"><i class="fa fa-behance"></i></a></li>
         </ul>
     </div>
-</div>
-{{--скрипт для ВЫПАДАЮЩЕГО МЕНЮ--}}
+
 
 
 
